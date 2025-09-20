@@ -8,15 +8,19 @@ void main() {
   // Daftar angka akan ditambahkan dari branch lain
 
   print("--- Program Perhitungan Faktorial ---");
+
+  // Loop untuk memproses setiap angka
   for (var angka in daftarAngka) {
-    // Logika perhitungan akan digabungkan dari branch lain
-    // Placeholder validasi
-    if (angka < 0) {
+    int hasilFaktorial = hitungFaktorial(angka);
+
+    // Validasi dan pencetakan hasil
+    if (hasilFaktorial == -1) {
       print("Faktorial dari $angka: Error, angka tidak boleh negatif.");
     } else {
-      print("Faktorial dari $angka: (hasil akan dihitung di sini)");
+      print("Faktorial dari $angka adalah: $hasilFaktorial");
     }
   }
+
   print("-------------------------------------");
 }
 
