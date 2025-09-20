@@ -1,16 +1,18 @@
 void main() {
-  // Daftar angka akan ditambahkan dari branch lain
-  List<int> daftarAngka = [5]; // Placeholder
-
+  // Format output dari branch 'fitur/output-dan-validasi'
   print("--- Program Perhitungan Faktorial ---");
+
+  // Loop untuk memproses setiap angka
   for (var angka in daftarAngka) {
-    // Logika perhitungan akan digabungkan dari branch lain
-    // Placeholder validasi
-    if (angka < 0) {
-        print("Faktorial dari $angka: Error, angka tidak boleh negatif.");
+    int hasilFaktorial = hitungFaktorial(angka);
+
+    // Validasi dan pencetakan hasil
+    if (hasilFaktorial == -1) {
+      print("Faktorial dari $angka: Error, angka tidak boleh negatif.");
     } else {
-        print("Faktorial dari $angka: (hasil akan dihitung di sini)");
+      print("Faktorial dari $angka adalah: $hasilFaktorial");
     }
   }
+
   print("-------------------------------------");
 }
